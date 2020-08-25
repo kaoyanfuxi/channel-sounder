@@ -19,12 +19,15 @@ close all;
 % variables
 sys_param.folderpath = "../data";
 sys_param.data_type = "float";
-sys_param.samp_rate = 125e6;
+sys_param.samp_rate = 200e6;
 sys_param.n_channels = 4;
 sys_param.ch_measurement_per_sec = 1000;
 sys_param.ch_measurement_len = 520;
 sys_param.ch_measurement_save_period_sec = 5;
 sys_param.seq_len = 125;
+sys_param.max_spatial_area = 20;
+
+lib_rf_channel.check_seq(sys_param);
 
 % instead of loading files recorded with usrp, we simulate data
 % TODO

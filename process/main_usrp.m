@@ -26,6 +26,9 @@ sys_param.ch_measurement_per_sec = 1000;
 sys_param.ch_measurement_len = 520;
 sys_param.ch_measurement_save_period_sec = 5;
 sys_param.seq_len = 125;
+sys_param.max_spatial_area = 20;
+
+lib_rf_channel.check_seq(sys_param);
 
 % first find all recorded files
 [filenames, seq_file] = lib_data_usrp.get_all_filenames(sys_param.folderpath);
